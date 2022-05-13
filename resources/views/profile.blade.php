@@ -14,13 +14,6 @@
                     @csrf
                     @method("PUT")
 
-                    <div class="form-group">
-                        <label for="image">Foto</label>
-                        <input name="image" type="file" class="form-control-file" id="image">
-                        <img alt="image" src="{{ asset('assets/images/' . $user->image) }}" class="img-fluid" style="width: 200px; margin-top: 1rem;">
-                        <p class="text-danger">{{ $errors->first("image") }}</p>
-                    </div>
-
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input value="{{ $user->name }}" name="name" id="name" type="text" class="form-control" placeholder="Masukkan nama">
