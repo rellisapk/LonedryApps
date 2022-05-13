@@ -125,12 +125,12 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
                                 @if(Auth::user()->is_Admin == 0)
-                                <li><a class="dropdown-item" href="/profile/edit/{{ Auth::user()->id}}">Profile</a></li><li>
+                                <li><a class="dropdown-item" href="/profile/edit/{{ Auth::user()->id}}">Profile</a></li>
                                 @endif
                                 @if(Auth::user()->is_Admin == 1)
                                 <li><a class="dropdown-item" href="{{ url('/home/admin') }}">Dashboard</a></li>
                                 @endif
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                <li><a class="dropdown-item" href="{{ route('logout') }}"
                                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
