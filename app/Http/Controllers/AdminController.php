@@ -100,7 +100,7 @@ class AdminController extends Controller
         return view('admin.editTreatments',['treatments'=>$treatments]);
 
     }
-    public function updateTreatments(Request $request, $id)
+    public function updateTreatments(Request $request)
     {
         Treatments::where('id',$request->id)->update([
             'name' => $request->name,
