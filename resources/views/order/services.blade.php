@@ -35,7 +35,7 @@
         </div>
         <div class="col-lg-3 col-8 p-3">
           <div class="service-wrap mx-auto">
-          <a href="/riwayat/{{Auth::user()->id}}'"><img class="service-img" src="{{ asset('images/service/transaksi.jpg') }}" alt="Riwayat Transaksi" style="height: 100%;">
+          <a href="/riwayat/{{Auth::user()->id}}"><img class="service-img" src="{{ asset('images/service/transaksi.jpg') }}" alt="Riwayat Transaksi" style="height: 100%;">
           </div>
           <h3 class="text-center">Riwayat Transaksi</h3></a>
         </div>
