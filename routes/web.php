@@ -39,7 +39,7 @@ Route::post('/home/admin/storeTreatments', [App\Http\Controllers\AdminController
 Route::get('/home/admin/editTreatments/{id}', [App\Http\Controllers\AdminController::class, 'editTreatments'])->middleware('isAdmin');
 Route::put('/home/admin/updateTreatments', [App\Http\Controllers\AdminController::class, 'updateTreatments'])->middleware('isAdmin');
 Route::get('/home/admin/deleteTreatments/{id}', [App\Http\Controllers\AdminController::class, 'deleteTreatments'])->middleware('isAdmin');
-Route::get('/order/{user}', [App\Http\Controllers\OrderController::class, 'index'])->name('order');
+Route::get('/order/{id}', [App\Http\Controllers\OrderController::class, 'index'])->name('order');
 Route::get('/riwayat/{user}', [App\Http\Controllers\OrderController::class, 'riwayat'])->name('riwayat');
 
 Route::get('/profile/edit/{user}', [App\Http\Controllers\HomeController::class, 'editProfile'])->name('profile.edit');
