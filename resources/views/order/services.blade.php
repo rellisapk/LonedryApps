@@ -23,19 +23,19 @@
     <div class="row justify-content-around">
         <div class="col-lg-3 col-8 p-3">
           <div class="service-wrap mx-auto">
-        <a href="/order/{{ Auth::user()->id}} }}"><img class="service-img" src="{{ asset('images/service/cuci_setrika.jpg') }}" alt="Cuci Setrika" style="height: 100%;left: -65px;">
+        <a href="/order/{{Auth::user()->id}}"><img class="service-img" src="{{ asset('images/service/cuci_setrika.jpg') }}" alt="Cuci Setrika" style="height: 100%;left: -65px;">
           </div>
           <h3 class="text-center">Cuci Setrika</h3></a>
         </div>
         <div class="col-lg-3 col-8 p-3">
           <div class="service-wrap mx-auto">
-          <a href="/order/{{ Auth::user()->id}} }}"><img class="service-img" src="{{ asset('images/service/setrika.jpg') }}" alt="Setrika" style="width: 100%;top: -45px;">
+          <a href="/order/{{Auth::user()->id}}"><img class="service-img" src="{{ asset('images/service/setrika.jpg') }}" alt="Setrika" style="width: 100%;top: -45px;">
           </div>
           <h3 class="text-center">Setrika</h3></a>
         </div>
         <div class="col-lg-3 col-8 p-3">
           <div class="service-wrap mx-auto">
-          <a href="/riwayat/{{ Auth::user()->id}} }}"><img class="service-img" src="{{ asset('images/service/transaksi.jpg') }}" alt="Riwayat Transaksi" style="height: 100%;">
+          <a href="/riwayat/{{Auth::user()->id}}'"><img class="service-img" src="{{ asset('images/service/transaksi.jpg') }}" alt="Riwayat Transaksi" style="height: 100%;">
           </div>
           <h3 class="text-center">Riwayat Transaksi</h3></a>
         </div>

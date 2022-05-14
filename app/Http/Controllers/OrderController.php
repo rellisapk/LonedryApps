@@ -13,7 +13,7 @@ class OrderController extends Controller
     public function index($id)
     {
         $treatments = Treatments::all();
-        $user = User::findOrFail($id);
+        $user = User::where('id', $id)->first();
         return view('order.order', compact('user', 'treatments'));
     }
 
@@ -51,6 +51,6 @@ class OrderController extends Controller
                     ->where('orders.user_id', $id)
                     ->get();
         return view('order.riwayat',['orders'=>$orders]);
-     
+
     }
 }

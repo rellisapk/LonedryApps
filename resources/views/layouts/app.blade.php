@@ -88,14 +88,14 @@
                         <a class="nav-link" href="{{ url('/') }}">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                    <a class="nav-link dropdown" href="{{ url('/services') }}" id="navbarDropdown">
+                    <a class="nav-link dropdown" href="{{ url('services') }}" id="navbarDropdown">
                             Services
-                        </a>
+                        <a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{{ url('/services') }}">Cuci + Setrika</a></li>
-                            <li><a class="dropdown-item" href="{{ url('/services') }}">Setrika</a></li>
+                            <li><a class="dropdown-item" href="{{ url('services') }}">Cuci + Setrika</a></li>
+                            <li><a class="dropdown-item" href="{{ url('services') }}">Setrika</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{{ url('/services') }}">Riwayat Transaksi</a></li>
+                            <li><a class="dropdown-item" href="{{ url('services') }}">Riwayat Transaksi</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

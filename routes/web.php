@@ -22,7 +22,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about']);
 Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact']);
-Route::get('/services', [App\Http\Controllers\ServiceController::class, 'services']);
+Route::get('/services', [App\Http\Controllers\ServiceController::class, 'services'])->name('services');
 Route::get('/home/admin', [App\Http\Controllers\AdminController::class, 'getData'])->name('admin.route')->middleware('isAdmin');
 
 Route::post('/home/admin/makeAdmin', [App\Http\Controllers\AdminController::class, 'makeAdmin'])->name('completedUpdate');
@@ -39,7 +39,7 @@ Route::post('/home/admin/storeTreatments', [App\Http\Controllers\AdminController
 Route::get('/home/admin/editTreatments/{id}', [App\Http\Controllers\AdminController::class, 'editTreatments'])->middleware('isAdmin');
 Route::put('/home/admin/updateTreatments', [App\Http\Controllers\AdminController::class, 'updateTreatments'])->middleware('isAdmin');
 Route::get('/home/admin/deleteTreatments/{id}', [App\Http\Controllers\AdminController::class, 'deleteTreatments'])->middleware('isAdmin');
-Route::get('/order/{id}', [App\Http\Controllers\OrderController::class, 'index'])->name('order');
+Route::get('/order/{user}', [App\Http\Controllers\OrderController::class, 'index'])->name('order');
 Route::get('/riwayat/{user}', [App\Http\Controllers\OrderController::class, 'riwayat'])->name('riwayat');
 
 Route::get('/profile/edit/{user}', [App\Http\Controllers\HomeController::class, 'editProfile'])->name('profile.edit');
