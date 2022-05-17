@@ -17,6 +17,7 @@
                                 <th>Deskripsi</th>
                                 <th>Jenis Treatment</th>
                                 <th>Status</th>
+                                <th>Invoice</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,6 +31,7 @@
                                 <th>{{$o->deskripsi}}</th>
                                 <th>{{$o->t_name}}</th>
                                 <th>{{$o->status}}</th>
+                                <th><a href="/riwayat/{{ Auth::user()->id}} }}/{{$o->id}}/order_pdf" class="btn btn-success">View</a></th>
                             </tr>
                             @endforeach
                             <!-- Masukin syntax sql disini -->

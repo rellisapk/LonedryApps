@@ -7,6 +7,7 @@ use App\Models\Treatments;
 use App\Models\User;
 use App\Models\Orders;
 use Illuminate\Support\Facades\DB;
+use PDF;
 
 class OrderController extends Controller
 {
@@ -53,4 +54,14 @@ class OrderController extends Controller
         return view('order.riwayat',['orders'=>$orders]);
      
     }
+
+    
+    public function cetak_pdf()
+    {
+    	$orders = Orders::all();
+ 
+    	$pdf = PDF::loadview('/riwayat/{{ Auth::user()->id}} }}/{{$o->id}}/order_pdf',['orders'=>$orders]);
+    	return $pdf->download('/riwayat/{{ Auth::user()->id}} }}/{{$o->id}}/order_pdf');
+    }
+
 }
