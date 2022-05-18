@@ -17,21 +17,20 @@
                                 <th>Deskripsi</th>
                                 <th>Jenis Treatment</th>
                                 <th>Status</th>
-                                <th>Invoice</th>
+                                <!-- <th>Invoice</th> -->
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($orders as $o)
                             <tr>
                                 <th>{{$loop->iteration}}</th>
-                                <!-- <th>{{$o->id}}</th> -->
                                 <th>{{$o->created_at}}</th>
                                 <th>{{$o->berat}}</th>
                                 <th>{{$o->total}}</th>
                                 <th>{{$o->deskripsi}}</th>
                                 <th>{{$o->t_name}}</th>
                                 <th>{{$o->status}}</th>
-                                <th><a href="/riwayat/{{ Auth::user()->id}} }}/{{$o->id}}/order_pdf" class="btn btn-success">View</a></th>
+                                <!-- <th><a href="/riwayat/order_pdf/{{Auth::user()->id}}/{{$o->id}}" class="btn btn-success">View</a></th> -->
                             </tr>
                             @endforeach
                             <!-- Masukin syntax sql disini -->

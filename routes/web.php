@@ -60,6 +60,6 @@ Route::middleware(['auth:sanctum'])->prefix('user')->group(function (){
 //     ]);
 // });
 
-Route::get('/order/{user}', [App\Http\Controllers\OrderController::class, 'order_pdf'])->name('order_pdf');
-Route::get('/riwayat/{{ Auth::user()->id}} }}/{{$o->id}}/order_pdf', 'OrderController@cetak_pdf');
+// Route::get('/order/{user}', [App\Http\Controllers\OrderController::class, 'order_pdf'])->name('order_pdf');
+Route::get('/riwayat/order_pdf/{user}/{order}', [App\Http\Controllers\OrderController::class, 'cetak_pdf'])->name('order_pdf');
 // Route::get('generate-invoice-pdf', array('as'=> '/riwayat/{{ Auth::user()->id}} }}/{{$o->id}}/order_pdf', 'uses' => 'OrderController@generateInvoicePDF'));

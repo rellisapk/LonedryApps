@@ -6,14 +6,14 @@
 
     <div>
         <tr>
-            <th>{{$loop->iteration}}</th>
-            <!-- <th>{{$o->id}}</th> -->
+            @foreach($orders as $o)
             <th>{{$o->created_at}}</th>
             <th>{{$o->berat}}</th>
             <th>{{$o->total}}</th>
             <th>{{$o->deskripsi}}</th>
             <th>{{$o->t_name}}</th>
             <th>{{$o->status}}</th>
+            @endforeach
         </tr>
     </div>
 @endsection

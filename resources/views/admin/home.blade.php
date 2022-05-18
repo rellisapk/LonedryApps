@@ -86,13 +86,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($treatments as $t)
+                                @foreach($treatments as $treatments)
                                     <tr>
-                                        <th>{{$t->id}}</th>
-                                        <th>{{$t->name}}</th>
-                                        <th>{{$t->price}}</th>
-                                        <th>{{$t->duration}}</th>
-                                        <th><a href="/home/admin/editTreatments/{{$t->id}}" class="btn btn-success">Edit</a> | <a href="/home/admin/deleteTreatments/{{$t->id}}" class="btn btn-danger">Delete</a></th>
+                                        <th>{{$treatments->id}}</th>
+                                        <th>{{$treatments->name}}</th>
+                                        <th>{{$treatments->price}}</th>
+                                        <th>{{$treatments->duration}}</th>
+                                        <th><a href="/home/admin/editTreatments/{{$treatments->id}}" class="btn btn-success">Edit</a> | <a href="/home/admin/deleteTreatments/{{$treatments->id}}" class="btn btn-danger">Delete</a></th>
                                     </tr>
                                 @endforeach
                                 </tbody>

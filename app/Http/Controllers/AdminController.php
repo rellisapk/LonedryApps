@@ -7,30 +7,25 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Orders;
 use App\Models\Treatments;
-use GuzzleHttp\Client;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
 
 class AdminController extends Controller
 {
     public function getData()
     {
-        // $client = new Client();
-        // $response = $client->request('GET','http://localhost:8000/api/treatment/index');
-        // $statusCode = $response->getStatusCode();
-        // $body = $response->getBody()->getContents();
+        // $response = Http::get('http://localhost:8000/api/treatment/index');
+        // $response = $response->object();
+        // dd($response);
 
-        // $data[]= array(json_encode($body,true));
-
-        // //return view('loker.loker',['data'=>$data]);
         // $title = 'Treatments';
         // if (request('category')) {
         //     $title = "Semua Treatments";
         // }
         // return view('admin.home', [
-        //     'data'=> $data,
         //    'title' => 'Treatments' . $title,
         //     'active' => 'events',
-        //     'lokers' => Treatments::all()
+        //     'treatments' => $response->data,
         // ]);
         $user = User::all();
         $orders = DB::table('orders')

@@ -55,13 +55,19 @@ class OrderController extends Controller
 
     }
 
-    
-    public function cetak_pdf()
+
+    public function cetak_pdf($id)
     {
-    	$orders = Orders::all();
- 
-    	$pdf = PDF::loadview('/riwayat/{{ Auth::user()->id}} }}/{{$o->id}}/order_pdf',['orders'=>$orders]);
-    	return $pdf->download('/riwayat/{{ Auth::user()->id}} }}/{{$o->id}}/order_pdf');
+        $users = User::findOrFail($id);
+    	$orders = DB::table('orders')
+                    ->join('users','users.id','=','orders.user_id')
+                    ->join('treatments','treatments.id','=','orders.treatment_id')
+                    ->select('orders.*', 'users.name as u_name','treatments.name as t_name')
+                    ->where('orders.user_id', $id)
+                    ->get();
+
+    	$pdf = PDF::loadview('order.order_pdf',['users' => $users, 'orders'=>$orders]);
+    	return $pdf->stream();
     }
 
 }
