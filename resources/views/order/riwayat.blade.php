@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Riwayat Pemesanan</div>
+                <center><div class="card-header"><h3>Riwayat Pemesanan</h3></div><center>
                 <div class="card-body">
                     <table class="table table-bordered table-hover table-responsive-xl">
                         <thead class="thead-dark">
