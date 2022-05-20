@@ -41,17 +41,17 @@ class HomeController extends Controller
         return view("profile", compact("user"));
     }
     public function updateProfile(Request $request, $id) {
-        $this->validate($request, [
-            "name" => "required|string",
-            "address" => "required|string",
-            "email" => "required|email|unique:users,id," . $id,
-            "password" => "required",
-            "birth" => "required",
-            "gender" => "required",
-            "phone" => "required|numeric"
-        ]);
+        // $this->validate($request, [
+        //     "name" => "required|string",
+        //     "address" => "required|string",
+        //     "email" => "required|email|unique:users",
+        //     "password" => "required",
+        //     "birth" => "required",
+        //     "gender" => "required",
+        //     "phone" => "required|numeric"
+        // ]);
 
-        $user = User::findOrFail($id);
+        $user = User::where('id', $id)->first();
 
             if ($user->password != $request->password) {
                 $user->update([
