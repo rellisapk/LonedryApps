@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="card-body">
-                    <form action="{{ route('profile.update', $user->id) }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('profile.update', $user->id ) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method("PUT")
 
@@ -66,7 +66,7 @@
         </div>
     </div>
 </div>
-<!-- 
+<!--
 <div class="container">
     <div class="card">
         <div class="card-header">
