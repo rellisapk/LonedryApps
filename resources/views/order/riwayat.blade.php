@@ -17,7 +17,7 @@
                                 <th>Deskripsi</th>
                                 <th>Jenis Treatment</th>
                                 <th>Status</th>
-                                <!-- <th>Invoice</th> -->
+                                <th>Invoice</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,7 +30,7 @@
                                 <th>{{$o->deskripsi}}</th>
                                 <th>{{$o->t_name}}</th>
                                 <th>{{$o->status}}</th>
-                                <!-- <th><a href="/riwayat/order_pdf/{{Auth::user()->id}}/{{$o->id}}" class="btn btn-success">View</a></th> -->
+                                <th><a href="/riwayat/nota/{{Auth::user()->id}}/{{$o->id}}" class="btn btn-success">View</a></th>
                             </tr>
                             @endforeach
                             <!-- Masukin syntax sql disini -->

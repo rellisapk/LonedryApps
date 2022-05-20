@@ -56,18 +56,15 @@ class OrderController extends Controller
     }
 
 
-    public function cetak_pdf($id)
+    public function nota($id)
     {
-        $users = User::findOrFail($id);
-    	$orders = DB::table('orders')
+        $user = User::findOrFail($id);
+        $orders = DB::table('orders')
                     ->join('users','users.id','=','orders.user_id')
                     ->join('treatments','treatments.id','=','orders.treatment_id')
                     ->select('orders.*', 'users.name as u_name','treatments.name as t_name')
-                    ->where('orders.user_id', $id)
                     ->get();
-
-    	$pdf = PDF::loadview('order.order_pdf',['users' => $users, 'orders'=>$orders]);
-    	return $pdf->stream();
+        return view('order.nota', ['user' => $user,'orders'=>$orders,'treatments'=>$treatments]);
     }
 
 }
