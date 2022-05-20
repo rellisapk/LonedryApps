@@ -56,14 +56,16 @@ class OrderController extends Controller
     }
 
 
-    public function nota($id)
+    public function nota($id, $order_id)
     {
         $user = User::findOrFail($id);
         $orders = DB::table('orders')
                     ->join('users','users.id','=','orders.user_id')
                     ->join('treatments','treatments.id','=','orders.treatment_id')
                     ->select('orders.*', 'users.name as u_name','treatments.name as t_name')
+                    ->where('orders.id', $order_id)
                     ->get();
+        $treatments = Treatments::all();
         return view('order.nota', ['user' => $user,'orders'=>$orders,'treatments'=>$treatments]);
     }
 
